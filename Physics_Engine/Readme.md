@@ -1,6 +1,6 @@
 # Dokumentation Physics-Engine 
   
- Dieses Projekt wird von Linus Schweizer und Gabriel Kraus entwickelt, bei dem Linus zum größten Teil die Dokumentation und Gabriel zum größten Teil den Programmcode schreibt. Die nötige Mahtematik haben wir gemeinsam (klasisch mit Stift und Papier) entwickelt.  
+ Dieses Projekt wird von Linus Schweizer und Gabriel Kraus entwickelt, bei dem Linus zum größten Teil die Dokumentation und Gabriel zum größten Teil den Programmcode schreibt. Die nötige Mathematik haben wir gemeinsam (klasisch mit Stift und Papier) entwickelt.  
   
   
  ## Klassenhierarchie 
