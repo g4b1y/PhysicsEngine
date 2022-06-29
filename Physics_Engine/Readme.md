@@ -25,7 +25,7 @@
      Shape-->main.cpp; 
  ```` 
  
->Eventuell muss der mermaid Code sepperat eingesehen werden(z.B. im Internt) da mermaid nur sehr umständlich zu PDF konvertiert werden kann.  
+>Eventuell muss der mermaid Code separat eingesehen werden(z.B. im Internt) da mermaid nur sehr umständlich zu PDF konvertiert werden kann.  
   
  ## Collision 
  In der Collision Klasse werden später Objekte von Formen übergeben um zu überprüfen, ob Objekte miteinander kollidieren. Die Syntax für die Collision funktion sieht etwa so aus:  
@@ -45,7 +45,7 @@
  ```` 
  Mathematisch sieht das dann etwa so aus:  
  $\large Kollision \space = \space \sqrt{(a_{x} + b_{x})^2 + (a_{y} + b_{y})^2} \leq a_{r} + b_{r}$ 
- Wenn die strecke $\Delta s$  kleiner gleich der Strecke $\Delta r$ (Summe der beiden Radien) entspricht. Allerdings ist diese Funktion noch nicht
+ Wenn die Strecke $\Delta s$  kleiner gleich der Strecke $\Delta r$ (Summe der beiden Radien) entspricht. Allerdings ist diese Funktion noch nicht
   implementiert (die Mathe jedoch steht schon).  
 
 ### SAT (Seperate Axis Theorem)
@@ -72,7 +72,7 @@ $A. P=A_{magnitude} \cdot P_{magnitude}*cos(theta)\\  A.\frac{P}{P_{magnitude}}=
  > _coming ..._ 
   
  ## Run 
- Im game Ordener werden Objekte an SFML übergeben und dann auf dem Bildschirm dargestellt. Jedoch muss der Code dazu erst noch geschrieben werden ;).    
+ Im Game-Ordner werden Objekte an SFML übergeben und dann auf dem Bildschirm dargestellt. Jedoch muss der Code dazu erst noch geschrieben werden ;).    
   
  ### run 
  > _coming..._ 
@@ -80,10 +80,10 @@ $A. P=A_{magnitude} \cdot P_{magnitude}*cos(theta)\\  A.\frac{P}{P_{magnitude}}=
   
   
  ## Shape 
- Im Shape Ordner werden jegliche Arten von Shapes gespeichert. Für komplexe und einfache Shapes gibt es die Shape-Klasse, aber dazu später mehr. Für Kreise gibt es eine eigene Klasse, da er nicht wirklich einer Form entspricht, da Kreise keine Ecken haben und somit auch keine Punkte (die eine Ecke repräsentieren könnten).  
+ Im Shape-Ordner werden jegliche Arten von Shapes gespeichert. Für komplexe und einfache Shapes gibt es die Shape-Klasse, aber dazu später mehr. Für Kreise gibt es eine eigene Klasse, da er nicht wirklich einer Form entspricht, da Kreise keine Ecken haben und somit auch keine Punkte (die eine Ecke repräsentieren könnten).  
   
  ### Circle 
- Die Circle Klasse ist eine eher simple Klasse. Da ein Kreis nur einen Radius und eine Position braucht, enthält die Klasse fast nichts. Wir möchten jedoch den Code(existiert noch nicht, die Schnittstellen allerdings schon) nicht vorweg nehmen.  
+ Die Circle-Klasse ist eine eher simple Klasse, da ein Kreis nur einen Radius und eine Position braucht, enthält diese Klasse fast nichts. Wir möchten jedoch den Code (existiert noch nicht, die Schnittstellen allerdings schon) nicht vorweg nehmen.  
   
  
  ```CPP
@@ -130,9 +130,9 @@ Außerdem gibt es eine Variable _radius_ die vom Typ float ist. Der Radius wird 
 >
 >Es geht übrigens auch beides:
 ```CPP
-	int var1 = { 0 }; //ungewohnlich, geht aber
+	int var1 = { 0 }; // ungewöhnlich, geht aber
 	
-	int var2 = 1;  // alte Art der Initialisierung duch den zuweisungsoperator
+	int var2 = 1;  // alte Art der Initialisierung duch den Zuweisungsoperator
 	
 	int var3 { 2 } // Initialisierung durch geschweifte Klammern, seit C++11
 ``` 
@@ -146,12 +146,12 @@ private:
 }
 ```
 
-Es steht auch zur Möglichkeit, dem Kreis einen Namen zu geben (allerdings wird dieser nicht bei einer Simulation angezeigt). Die Idee dahinter ist, den Überblick über Objekte zu behalten und diese mit dem Namen anzusprechen. Der Datentyp für den Namen ist ein String. Strings in C++ sind „etwas“ speziell, da sie einmal als alten Char-Array betrachtet werden, aber auch als modernes C++ Objekt.
+Es steht auch zur Möglichkeit, dem Kreis einen Namen zu geben (allerdings wird dieser in der Simulation nicht angezeigt). Die Idee dahinter ist, den Überblick über Objekte zu behalten und diese mit dem Namen anzusprechen. Der Datentyp für den Namen ist ein String. Strings in C++ sind etwas „speziell“, da sie einmal als ein Char-Array betrachtet werden, aber auch als ein modernes C++ Objekt.
 
 > Char ist ein Datentyp, der einfache Zeichen speichern kann. Die Zuweisung ist fast genauso wie bei normalen Zahlen, jedoch ist zu beachten, dass die Zuweisung entweder eine Zahl (die dann das Zeichen an der Stelle im ASCII-Code lädt) oder ein Zeichen, das allerdings zwischen zwei Hochkommas stehen muss ( ' ' ) . Chars kennt man vielleicht aus anderen Programmiersprachen wie z.B. JAVA oder Python. In C++ hat ein im Speicher 2 Bytes (2 x 8 Bits). Es gibt allerdings auch noch Chars die weit aus mehr Speicher reservieren um komplexer Zeichen (z.B. Chinesisch) zu speichern. Diese haben dann bis zu 64 Bit (abhängig vom genutzten Compiler).
 ```CPP
-	char someChar { 'a' }; //einfaches Alphabet / ASCII Zeichen
-	wchar_t anotherChar {''}; //kann komplexe ASCII Zeichen speichern und ausgeben
+	char someChar { 'a' }; // einfaches Alphabet / ASCII Zeichen
+	wchar_t anotherChar {''}; // kann komplexe ASCII Zeichen speichern und ausgeben
 ```
 
 
@@ -177,7 +177,7 @@ RegularPolygon() aufruft.
 
 ### RegularPolygon(const float, const int))
 
-Dabei wird in einem Ctor mitgegeben, die Anzahl der Ecken regelmäßig auf einem imaginären Kreis verteilt. Um einen beliebigen Punkt $P {_i}$
+Dabei wird die Anzahl der Ecken in einem Ctor mitgegeben, diese werden dann regelmäßig auf einem imaginären Kreis verteilt. Um einen beliebigen Punkt $P {_i}$
 zu berechnen, wird folgendes Berechnung für die x Koordinate durchgeführt:
   
 ${\large   x = cos(\frac{2 \cdot \pi \cdot i}{n}) \cdot r}$ 
@@ -186,7 +186,7 @@ und für die y Koordinate: 
   
  ${\large   y = sin(\frac{2 \cdot \pi \cdot i}{n}) \cdot r}$ 
  
- und alles zusammengesetzt ergibt das dann den Punkt:  
+ und alles zusammengesetzt ergibt dann den Punkt:  
   
    ${{\large P _i = \biggl \lgroup cos \biggl( \frac{2 \cdot \pi \cdot i}{n} \biggr ) \cdot r \space , \space sin \biggl(\frac{2 \cdot \pi \cdot i}{n} \biggr) \cdot r }\biggr \rgroup}$ 
   
